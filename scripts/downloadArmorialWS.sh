@@ -66,4 +66,6 @@ case $yn in
 esac
 
 
-
+cd $scriptWD/..
+cd ..
+sudo chmod -R a+rwx ./Armorial-WS/
