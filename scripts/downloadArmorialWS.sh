@@ -56,7 +56,13 @@ qmake ..
 make
 
 cd $scriptWD/..
-echo "placeHolder to Armorial-Suassuna"
+git clone https://github.com/maracatronics/Armorial-Suassuna.git
+cd Armorial-Suassuna
+sudo sh protobuf.sh
+cd build
+qmake ..
+make
+
 
 read -p "Do you wish to install the Armorial-chico firmware repository?" yn
 case $yn in
