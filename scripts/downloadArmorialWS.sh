@@ -61,6 +61,16 @@ cd build
 qmake ..
 make
 
+echo "Installing Armorial-Actuator"
+cd $scriptWD/..
+git clone https://github.com/maracatronics/Armorial-Actuator.git
+cd Armorial-Actuator
+sudo sh protobuf.sh
+mkdir build && cd build
+qmake ..
+make
+
+echo "Installing Armorial-Suassuna"
 cd $scriptWD/..
 git clone https://github.com/maracatronics/Armorial-Suassuna.git
 cd Armorial-Suassuna
