@@ -1,6 +1,15 @@
 # Armorial-WS
 
-Open "Script" folder in Terminal and run
+## Installing and compiling entire workspace
 ```bash
-sudo sh downloadArmorialWS.sh
+cd scripts
+chmod +x ./downloadArmorialWS.sh
+sh downloadArmorialWS.sh
 ```
+## Running WRBackbone
+
+## Running only Armorial-Carrero
+
+## Running Armorial-Carrero + Armorial-Suassuna
+
+## Running Armorial-Carrero + Armorial-Suassuna + Armorial-Actuator
