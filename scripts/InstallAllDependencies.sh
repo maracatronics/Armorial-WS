@@ -4,7 +4,7 @@ sudo apt upgrade
 
 echo "Installing Dependencies"
 
-sudo apt install build-essential libsfml-dev g++ libqt4-dev libeigen3-dev protobuf-compiler libprotobuf-dev libdc1394-22 libdc1394-22-dev cmake libv4l-0 libopencv-dev freeglut3-dev qt5-default omniorb omniidl omniorb-nameserver libomniorb4-dev
+sudo apt install build-essential libsfml-dev g++ libeigen3-dev protobuf-compiler libprotobuf-dev libdc1394-22 libdc1394-22-dev cmake libv4l-0 libopencv-dev freeglut3-dev qt5-default omniorb omniidl omniorb-nameserver libomniorb4-dev
 
 read -p "Do you wish to install QT Creator?" yn
 case $yn in

@@ -16,7 +16,7 @@ echo "[runWRCoach] Starting..."
 
 echo "[runWRCoach] Compiling softwares..."
 tput setaf 2
-sh compileAll.sh &> /dev/null
+sh compileAll.sh 
 tput sgr0
 
 echo "[runWRCoach] Creating symbolic links..."
@@ -97,7 +97,7 @@ do
     [Qq]* ) echo "Downloading Armorial-Chico";
 	echo ""
     tput setaf 2
-    sh killWR.sh
+    sh killArmorial.sh
     tput sgr0
     echo "[runWRCoach] Finished!"
     exit 0;;

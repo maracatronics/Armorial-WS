@@ -11,7 +11,7 @@ if [ $(pidof WRJoy) ]; then
 	sudo kill -9 $(pidof WRJoy) &
 fi
 
-sudo killall -q WRTest 
+# sudo killall -q WRTest 
 sudo killall -q Armorial-Suassuna 
 sudo killall -q Armorial-SimActuator 
 sudo killall -q Armorial-Carrero 
