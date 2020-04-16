@@ -6,10 +6,16 @@ cd scripts
 chmod +x ./downloadArmorialWS.sh
 sh downloadArmorialWS.sh
 ```
-## Running WRBackbone
+## To compile entire solution
+This script compile all solutions of Armorial Project
+```bash
+cd scripts
+sh ./compileAll.sh
+```
+## Running Armorial to comunicate with GrSim
+This script launch WRBackbone, Armorial-Carrero, Armorial-Suassuna and Armorial-Actuator to rn with GrSim
 
-## Running only Armorial-Carrero
-
-## Running Armorial-Carrero + Armorial-Suassuna
-
-## Running Armorial-Carrero + Armorial-Suassuna + Armorial-Actuator
+```bash
+cd scripts
+sh ./runSuassuna-GrSim.sh
+```
