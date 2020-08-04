@@ -1,4 +1,4 @@
-git clone https://github.com/maracatronics/GEARSystem.git
+git clone https://github.com/MaracatronicsRobotics/GEARSystem.git
 cd GEARSystem
 cd trunk
 
