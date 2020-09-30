@@ -1,6 +1,10 @@
 scriptWD=`pwd`
 
+sudo rm -rf /var/lib/omniorb/*
 sudo service omniorb4-nameserver restart
+
+sleep 5
+
 cd WRBackbone
 cd trunk
 cd build
