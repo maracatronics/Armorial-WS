@@ -15,14 +15,20 @@ cd bin
 
 sleep 5
 cd ../../../../
+scriptWD=`pwd`
+echo $scriptWD
 cd Armorial-Actuator/bin
 ./Armorial-SimActuator &> /dev/null &
 
 cd ../../
+scriptWD=`pwd`
+echo $scriptWD
 cd ./Armorial-Carrero/bin
 ./Armorial-Carrero &> /dev/null &
 
 
 cd ../../
+scriptWD=`pwd`
+echo $scriptWD
 cd ./Armorial-Suassuna/bin
 ./Armorial-Suassuna &> /dev/null &
