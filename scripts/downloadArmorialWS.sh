@@ -1,7 +1,7 @@
 
 scriptWD=`pwd`
 
-sh ./InstallAllDependencies.sh
+# sh ./InstallAllDependencies.sh
 
 cd $scriptWD/..
 echo "Installing GEARSystem"
