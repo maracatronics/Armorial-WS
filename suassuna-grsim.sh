@@ -20,14 +20,14 @@ echo $scriptWD
 cd Armorial-Actuator/bin
 ./Armorial-SimActuator &> /dev/null &
 
-sleep 3
+sleep 5
 cd ../../
 scriptWD=`pwd`
 echo $scriptWD
 cd ./Armorial-Carrero/bin
 ./Armorial-Carrero &> /dev/null &
 
-sleep 3
+sleep 5
 cd ../../
 scriptWD=`pwd`
 echo $scriptWD
