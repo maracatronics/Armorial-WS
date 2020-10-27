@@ -1,3 +1,5 @@
+cd home/Armorial-WS/
+
 scriptWD=`pwd`
 
 sudo rm -rf /var/lib/omniorb/*
