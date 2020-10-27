@@ -29,12 +29,12 @@ echo "Installing Armorial-Actuator"
 sh ./scripts/InstallArmorialActuator.sh
 
 
-read -p "Do you wish to install the Armorial-chico firmware repository?" yn
-case $yn in
-    [Yy]* ) echo "Downloading Armorial-Chico"; git clone https://github.com/maracatronics/Armorial-Chico.git;;
-    [Nn]* ) echo "Bye-bye :)";;
-    * ) echo "Please answer yes or no.";;
-esac
+# read -p "Do you wish to install the Armorial-chico firmware repository?" yn
+# case $yn in
+#     [Yy]* ) echo "Downloading Armorial-Chico"; git clone https://github.com/maracatronics/Armorial-Chico.git;;
+#     [Nn]* ) echo "Bye-bye :)";;
+#     * ) echo "Please answer yes or no.";;
+# esac
 
 
 cd $scriptWD/..
