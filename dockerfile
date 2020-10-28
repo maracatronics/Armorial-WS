@@ -1,8 +1,9 @@
 FROM ubuntu:18.04
 
+
 # dependencies
 RUN apt-get update && apt-get install -y \
-    build-essential \
+    build-essential nano \
     cmake \
     git \
     qt5-default \
@@ -14,6 +15,10 @@ RUN apt-get update && apt-get install -y \
 
 # gear system
 RUN cd /home && \
+    git clone https://github.com/maracatronics/Armorial-WS.git 
+
+# gear system
+RUN cd /home/Armorial-WS && \
     git clone https://github.com/MaracatronicsRobotics/GEARSystem.git && \
     cd GEARSystem && \
     cd trunk && \
@@ -23,10 +28,34 @@ RUN cd /home && \
     make -j4 && \
     sh install.sh 
 
-RUN git clone https://github.com/MaracatronicsRobotics/WRBackbone.git && \
+RUN cd /home/Armorial-WS && \ 
+    git clone https://github.com/MaracatronicsRobotics/WRBackbone.git && \
     cd WRBackbone && \
     cd trunk && \
     mkdir build && \
     cd build && \
     qmake .. && \
     make -j4
+
+RUN cd /home/Armorial-WS && \ 
+    git clone https://github.com/MaracatronicsRobotics/Armorial-Actuator.git && \ 
+    cd Armorial-Actuator && \  
+    mkdir build && cd build && \ 
+    qmake .. && \ 
+    make -j8
+
+RUN cd /home/Armorial-WS && \ 
+    git clone https://github.com/MaracatronicsRobotics/Armorial-Carrero.git && \ 
+    cd Armorial-Carrero && \ 
+    mkdir build && cd build && \ 
+    qmake .. && \ 
+    make -j8
+
+RUN cd /home/Armorial-WS && \ 
+    git clone https://github.com/MaracatronicsRobotics/Armorial-Suassuna.git && \ 
+    cd Armorial-Suassuna && \ 
+    mkdir build && cd build && \ 
+    qmake .. && \ 
+    make -j8
+
+WORKDIR ./home/Armorial-WS/

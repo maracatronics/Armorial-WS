@@ -9,6 +9,12 @@ CONTAINER_WORK_DIR=$WORK_DIR
 CONTAINER_NAME=$DEFAULT_CONTAINER_NAME
 DOCKER_IMAGE=$DEFAULT_DOCKER_IMAGE
 
+
+# killall Xorg (no need when run Xorg for the first time)
+
+# export DISPLAY=:0.0
+
+# /usr/bin/Xorg -depth 16&
 #service omniorb4-nameserver restart
 docker run  --gpus all -it \
             --user=$(id -u) \
@@ -28,6 +34,7 @@ docker run  --gpus all -it \
             --volume="/etc/shadow:/etc/shadow:ro" \
             --volume="/etc/sudoers.d:/etc/sudoers.d:ro" \
             --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+            -v $HOME/.Xauthority:/root/.Xauthority \
             $DOCKER_IMAGE
 
 docker container rm $CONTAINER_NAME -f
