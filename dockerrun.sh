@@ -16,7 +16,7 @@ DOCKER_IMAGE=$DEFAULT_DOCKER_IMAGE
 
 # /usr/bin/Xorg -depth 16&
 #service omniorb4-nameserver restart
-docker run  --gpus all -it \
+docker run  -it \
             --user=$(id -u) \
             --env="DISPLAY" \
             --env="QT_X11_NO_MITSHM=1" \

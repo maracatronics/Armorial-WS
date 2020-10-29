@@ -1,16 +1,23 @@
 FROM ubuntu:18.04
 
-
 # dependencies
 RUN apt-get update && apt-get install -y \
-    build-essential nano \
+    build-essential \
+    nano \
     cmake \
     git \
     qt5-default \
     sudo \
+    omniorb \
+    omniidl \
+    omniorb-nameserver \
+    libomniorb4-dev \
+    libprotobuf-dev \
     protobuf-compiler \
-    libsfml-dev \
-    freeglut3-dev libgl1-mesa-dev libglm-dev libglew1.5-dev \
+    freeglut3-dev \
+    libgl1-mesa-dev \
+    libglm-dev \
+    libglew1.5-dev \
     && apt-get clean
 
 # gear system
@@ -22,7 +29,6 @@ RUN cd /home/Armorial-WS && \
     git clone https://github.com/MaracatronicsRobotics/GEARSystem.git && \
     cd GEARSystem && \
     cd trunk && \
-    sh InstallUbuntuDependencies.sh && \
     sh build/corba_skeletons.sh && \
     qmake install_path=/usr/lib && \
     make -j4 && \
