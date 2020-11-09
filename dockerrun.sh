@@ -18,7 +18,7 @@ DOCKER_IMAGE=$DEFAULT_DOCKER_IMAGE
 #service omniorb4-nameserver restart
 docker run  -it \
             --user=$(id -u) \
-            --env="DISPLAY" \
+            --env="DISPLAY=:10" \
             --env="QT_X11_NO_MITSHM=1" \
             --name=$CONTAINER_NAME \
             --memory=1024g \
